@@ -14,14 +14,11 @@ fi
 
 echo -e "[+] Checking in subscraper"
 subscraper -r $subdomain_path/subscraper_output1 $domain > /dev/null && cat $subdomain_path/subscraper_output1 > $subdomain_path/found.txt
-
-echo -e "[+] Checking again in subscraper"
 subscraper -r $subdomain_path/subscraper_output2 $domain > /dev/null && cat $subdomain_path/subscraper_output2 >> $subdomain_path/found.txt
+subscraper -r $subdomain_path/subscraper_output3 $domain > /dev/null && cat $subdomain_path/subscraper_output3 >> $subdomain_path/found.txt
 
 echo -e "\n[+] Checking in subfinder"
 subfinder -d $domain  > /dev/null 2>&1 > $subdomain_path/subfinder_output1 && cat $subdomain_path/subfinder_output1 >> $subdomain_path/found.txt
-
-echo -e "[+] Checking again in subfinder"
 subfinder -d $domain  > /dev/null 2>&1 > $subdomain_path/subfinder_output2 && cat $subdomain_path/subfinder_output2 >> $subdomain_path/found.txt
 
 echo -e "\n[+] Checking in assetfinder"
