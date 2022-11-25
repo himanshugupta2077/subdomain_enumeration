@@ -24,7 +24,7 @@ subfinder -d $domain  > /dev/null 2>&1 > $subdomain_path/subfinder_output1 && ca
 echo -e "[+] Checking again in subfinder"
 subfinder -d $domain  > /dev/null 2>&1 > $subdomain_path/subfinder_output2 && cat $subdomain_path/subfinder_output2 >> $subdomain_path/found.txt
 
-echo -e "\n[+] Checking in asset	er"
+echo -e "\n[+] Checking in assetfinder"
 assetfinder $domain | grep $domain > $subdomain_path/assetfinder_output && cat $subdomain_path/assetfinder_output >> $subdomain_path/found.txt
 
 cat $subdomain_path/found.txt | sort | sort -u > $subdomain_path/sorted.txt
