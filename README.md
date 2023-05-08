@@ -5,7 +5,7 @@ Python script (wrapper) to run subdomain enumeration tools (subscrapper, subfind
 
 ```bash
 user@pc ~/Documents
-$ ./subdomain_enum.py example.com
+$ ./main.py example.com
 [+] Running subscrapper
 [+] Running subfinder
 [+] Running assetfinder
